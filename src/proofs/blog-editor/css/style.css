@@ -1,0 +1,73 @@
+:root {
+    --background: hsl(0, 50%, 92%);
+
+    --ed-bg: hsl(0, 0%, 92%);
+    --ed-bg-2: hsl(220, 1%, 80%);
+    --ed-bg-3: hsl(220, 90%, 98%);
+    --ed-text-1: hsl(0, 0%, 5%);
+}
+
+body {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    height: 100svh;
+    overflow-x: hidden;
+
+    background: var(--background);
+}
+
+main {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* tiny MCE overides */
+#core>div.tox.tox-tinymce {
+    border-radius: 0;
+    width: 80%;
+    left: 10%;
+    border: none;
+    /*
+    outline: 1px solid hsl(0, 0%, 92%, 1.0);
+    */
+}
+
+#core>div.tox.tox-tinymce>div.tox-editor-container {}
+
+#core>div.tox.tox-tinymce>div.tox-editor-container>div.tox-editor-header {
+    background-color: var(--ed-bg);
+    box-shadow: none;
+}
+
+#core>div.tox.tox-tinymce>div.tox-editor-container>div.tox-editor-header>div.tox-menubar {
+    background-color: var(--ed-bg);
+}
+
+#core>div.tox.tox-tinymce>div.tox-editor-container>div.tox-editor-header>div.tox-toolbar-overlord {
+    background-color: var(--ed-bg);
+}
+
+#core>div.tox.tox-tinymce>div.tox-editor-container>div.tox-editor-header>div.tox-toolbar-overlord>div {
+    background-color: var(--ed-bg);
+}
+
+#core>div.tox.tox-tinymce>div.tox-editor-container>div.tox-editor-header>div.tox-toolbar-overlord>div>div:nth-child(2)>button {
+    color: var(--ed-text-1);
+    background-color: var(--ed-bg-2);
+}
+
+#editor-container_ifr {
+    background-color: var(--ed-bg-3);
+}
+
+#core>div.tox.tox-tinymce>div.tox-editor-container>div.tox-statusbar {
+    background-color: var(--ed-bg);
+}
+
+#core>div.tox.tox-tinymce>div.tox-editor-container>div.tox-statusbar>div.tox-statusbar__text-container.tox-statusbar__text-container--flex-start>div>div {
+    color: var(--ed-text-1);
+}

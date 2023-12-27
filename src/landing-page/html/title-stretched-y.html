@@ -1,0 +1,21 @@
+<figure style="height: inherit; --stretched-text-height: {{totalHeight}}rem; --stretched-text-cut-height: {{cutHeight}}rem">
+    <div style="position: relative;
+    height: var(--stretched-text-height);
+    display: grid;
+    transform: scaleY(2);font-family: serif;">
+        <div style="font-size: var(--stretched-text-height);
+    position: absolute;
+    color: {{colour1}};
+    height: var(--stretched-text-cut-height);
+    overflow: hidden;
+    z-index: 2;
+    pointer-events: none;">{{title}}</div>
+        <div style="position: relative;
+    height: var(--stretched-text-height);
+    top: 0;
+    color:  {{colour2}};
+    font-size: var(--stretched-text-height);
+    ">{{title}}</div>
+    </div>
+    <figcaption style="visibility: hidden;">A title saying {{title}}</figcaption>
+</figure>

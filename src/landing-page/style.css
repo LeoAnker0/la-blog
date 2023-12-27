@@ -1,0 +1,43 @@
+:root {
+    --stretched-text-height: 12rem;
+    --stretched-text-cut-height: 8rem;
+}
+
+body {
+    margin: 0;
+    background: #EBEBEB;
+    margin-top: 4rem;
+    margin-left: 4rem;
+}
+
+figure {
+    height: 8rem;
+    margin-top: 8rem;
+}
+
+.stretched-text-container {
+    position: relative;
+    height: var(--stretched-text-height);
+    display: grid;
+    transform: scaleY(2);
+}
+
+.stretched-text-container .a {
+    font-size: var(--stretched-text-height);
+    position: absolute;
+    color: #C8001D;
+    height: var(--stretched-text-cut-height);
+    overflow: hidden;
+    z-index: 2;
+    pointer-events: none;
+    font-family: serif;
+}
+
+.stretched-text-container .b {
+    position: relative;
+    height: var(--stretched-text-height);
+    top: 0;
+    color: #1B00FF;
+    font-size: var(--stretched-text-height);
+    font-family: serif;
+}

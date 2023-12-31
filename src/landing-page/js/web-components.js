@@ -12,6 +12,13 @@ class StretchedTextY extends HTMLElement {
         const heights = this.getAttribute('heights') || '8, 4';
         const [height1, height2] = heights.split(',');
         const title = this.textContent;
+        const stretchFactor = this.getAttribute('stretch-factor') || '2';
+
+        //get assigned classes and add to the new.
+        let classes = "";
+        this.classList.forEach(className => {
+            classes = classes + `${className} `;
+        });
 
         // Replace content in the html template
         const replacementQuery = {
@@ -21,13 +28,15 @@ class StretchedTextY extends HTMLElement {
                 totalHeight: height1,
                 cutHeight: height2,
                 colour1,
-                colour2
+                colour2,
+                stretchFactor: stretchFactor,
+                classes
             }
         }
         const modifiedHTML = replaceSections(replacementQuery);
 
         // Append the html elements to the shadow DOM
-        this.innerHTML = modifiedHTML;
+        this.outerHTML = modifiedHTML;
     }
 }
 

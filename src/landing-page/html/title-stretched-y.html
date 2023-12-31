@@ -1,8 +1,8 @@
-<figure style="height: inherit; --stretched-text-height: {{totalHeight}}rem; --stretched-text-cut-height: {{cutHeight}}rem">
+<figure class="{{classes}}" style="height: inherit; --stretched-text-height: {{totalHeight}}rem; --stretched-text-cut-height: {{cutHeight}}rem; pointer-events: none;">
     <div style="position: relative;
     height: var(--stretched-text-height);
     display: grid;
-    transform: scaleY(2);font-family: serif;">
+    transform: scaleY({{stretchFactor}});font-family: serif;">
         <div style="font-size: var(--stretched-text-height);
     position: absolute;
     color: {{colour1}};
